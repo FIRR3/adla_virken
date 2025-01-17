@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+  h1{
+    @apply font-header text-6xl
+  }
+  h2{
+    @apply font-header text-4xl
+  }
+  p, a, button{
+    @apply font-content font-light text-base
+  }
+}
+@layer components{
+  /* button styles */
+  .btn-regular, .btn-filled{
+    @apply font-medium text-center tracking-wide px-2 rounded-md cursor-pointer
+  }
+  .btn-regular{
+    @apply bg-white text-primary-full py-[10px] border-2 border-primary-full hover:bg-grey-light
+  }
+  .btn-filled{
+    @apply bg-primary-full text-white hover:bg-primary-transparent py-3
+  }
+  /* nav dropdown */
+  .nav-dropdown{
+    @apply absolute hidden flex-col rounded bg-white shadow-lg group-hover:flex
+  }
+  /* dropdown arrow */
+  .dropdown-arrow{
+    @apply transition-all ease-in duration-300 group-hover:rotate-180
+  }
+}
+
+nav ul li a, nav ul li p{
+  @apply font-normal cursor-pointer 
+}
+.nav-dropdown li{
+  @apply px-4 py-3 rounded hover:bg-grey-light
+}

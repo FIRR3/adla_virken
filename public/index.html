@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- fontawesome -->
+  <script src="https://kit.fontawesome.com/d49f5435ad.js" crossorigin="anonymous"></script>
+  <!-- css -->
+  <link rel="stylesheet" href="../src/output.css">
+  <!-- fonts (Manrope & Noto Sans) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <title>Ädla Virken</title>
+</head>
+<body>
+  <nav class="w-full h-[15vh] flex items-center justify-between px-14 shadow-lg">
+    <a href=""><img src="../images/adla-virken-logo.svg" alt="Ädla Virken logo"></a>
+    <ul class="flex flex-row gap-4 items-center">
+      <li class="group">
+        <p class="px-4 py-3 rounded group-hover:bg-grey-light">För skogsföretag<i class="dropdown-arrow fa-solid fa-chevron-up ml-1"></i></p>
+        <ul class="nav-dropdown">
+          <li><a href="">Skapa annons</a></li>
+          <li><a href="">Mina annonser</a></li>
+        </ul>
+      </li>
+      <li class="group">
+        <p class="px-4 py-3 rounded group-hover:bg-grey-light">För uppköpare<i class="dropdown-arrow fa-solid fa-chevron-up ml-1"></i></p>
+        <ul class="nav-dropdown">
+          <li class=""><a href="">Skicka begäran</a></li>
+          <li><a href="">Mina begäran</a></li>
+        </ul>
+      </li>
+      <li class="group">
+        <p class="px-4 py-3 rounded group-hover:bg-grey-light">Om oss<i class="dropdown-arrow fa-solid fa-chevron-up ml-1"></i></p>
+        <ul class="nav-dropdown">
+          <li><a href="">Om Ädla Virken</a></li>
+          <li><a href="">Kontakta oss</a></li>
+        </ul>
+      </li>
+      <li><button type="button" class="btn-regular w-32">Registrera</button></li>
+      <li><button type="button" class="btn-filled w-32">Logga in</button></li>
+    </ul>
+  </nav>
+
+  <!-- hero section -->
+  <section class="flex flex-col justify-center items-start gap-12 w-full h-[85vh] px-20
+  bg-[url('../images/tree-bark.png')] bg-center bg-cover">
+  <div class="flex flex-col gap-5">
+    <h1 class="text-white"><span class="font-extralight">Ädla virken</span>: kvalitetsvirke<br>för kvalitetspriser</h1>
+    <p class="text-white">Vi är den framtida marknadsplatsen för svenskt kvalitetsvirke.</p>
+  </div>
+  <div class="flex flex-row gap-5">
+    <a href="" class="btn-regular w-44 border-white">Sälj virke</a>
+    <a href="" class="btn-filled w-44">Beställ virke</a>
+  </div>
+  </section>
+
+  <script src="../javascript/main.js"></script>
+</body>
+</html>

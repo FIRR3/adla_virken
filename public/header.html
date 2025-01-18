@@ -14,34 +14,38 @@
   <title>Ädla Virken</title>
 </head>
 <body>
-  <nav class="w-full h-[15vh] flex items-center justify-between px-14 shadow-lg">
-    <a href=""><img src="../images/adla-virken-logo.svg" alt="Ädla Virken logo"></a>
-    <ul class="flex flex-row gap-4 items-center">
-      <li class="dropDownLi group">
-        <p class="px-4 py-3 rounded group-hover:bg-grey-light">För skogsföretag<i class="dropdown-arrow fa-solid fa-chevron-up ml-1"></i></p>
-        <ul class="nav-dropdown">
-          <li><a href="">Skapa annons</a></li>
-          <li><a href="">Mina annonser</a></li>
-        </ul>
-      </li>
-      <li class="dropDownLi group">
-        <p class="px-4 py-3 rounded group-hover:bg-grey-light">För uppköpare<i class="dropdown-arrow fa-solid fa-chevron-up ml-1"></i></p>
-        <ul class="nav-dropdown">
-          <li class=""><a href="">Skicka begäran</a></li>
-          <li><a href="">Mina begäran</a></li>
-        </ul>
-      </li>
-      <li class="dropDownLi group">
-        <p class="px-4 py-3 rounded group-hover:bg-grey-light">Om oss<i class="dropdown-arrow fa-solid fa-chevron-up ml-1"></i></p>
-        <ul class="nav-dropdown">
-          <li><a href="">Om Ädla Virken</a></li>
-          <li><a href="">Kontakta oss</a></li>
-        </ul>
-      </li>
-      <li class="flex flex-row gap-4 "><button type="button" class="btn-regular w-32">Registrera</button><button type="button" class="btn-filled w-32">Logga in</button></li>
-    </ul>
+  <nav class="fixed top-0 left-0 w-full flex flex-row items-center justify-between shadow-lg px-[4vw]
+  h-[15vw] sm:h-[20vw] md:h-[15vh]">
+  <a href=""><img src="../images/adla-virken-logo.svg" alt="Ädla Virken logo" class="w-[8vw] sm:w-10 xl:w-[3vw]"></a>
+  <ul class="fixed top-0 left-0 flex flex-col w-full px-[4vw] py-8 bg-white gap-4 items-start shadow-lg">
+    <!-- <li class="group flex flex-col gap-4 w-full px-[6vw]">
+      <p class="rounded ">För skogsföretag<i class="dropdown-arrow fa-solid fa-chevron-up ml-1"></i></p>
+      <ul class="flex flex-col gap-4 hidden">
+        <li><a href="" class="">Skapa annons</a></li>
+        <li><a href="">Mina annonser</a></li>
+      </ul>
+    </li>
+    <li class="group px-[6vw] flex flex-col gap-4">
+      <p class="rounded ">För uppköpare<i class="dropdown-arrow fa-solid fa-chevron-down ml-1"></i></p>
+      <ul class="flex flex-col gap-4 hidden">
+        <li class=""><a href="">Skicka begäran</a></li>
+        <li><a href="">Mina begäran</a></li>
+      </ul>
+    </li> -->
+    <li class="group w-full flex flex-col">
+      <div class="flex flex-row items-center justify-between rounded px-4 py-[1.5vw] sm:py-3 active:bg-grey-light">
+        <p class="">Om oss</p>
+        <i class="dropdown-arrow fa-solid fa-chevron-down ml-1"></i>
+      </div>
+      <ul class="flex flex-col px-[4vw]">
+        <li class="rounded px-4 py-[1.5vw] sm:py-3 active:bg-grey-light"><a href="">Om Ädla Virken</a></li>
+        <li class="rounded px-4 py-[1.5vw] sm:py-3 active:bg-grey-light"><a href="">Kontakta oss</a></li>
+      </ul>
+    </li>
+    <li class="flex flex-row gap-4 mx-auto"><button type="button" class="btn-regular w-32">Registrera</button><button type="button" class="btn-filled w-32">Logga in</button></li>
+  </ul>
+  <div><i class="fa fa-bars text-[6vw] sm:text-[1.6rem] xl:text-[2vw]"></i></div>
   </nav>
-<div></div>
 
 <script src="../javascript/main.js"></script>
 </body>

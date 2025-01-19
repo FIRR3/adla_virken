@@ -17,34 +17,47 @@
   <nav class="fixed top-0 left-0 w-full flex flex-row items-center justify-between shadow-lg px-[4vw]
   h-[15vw] sm:h-[20vw] md:h-[15vh]">
   <a href=""><img src="../images/adla-virken-logo.svg" alt="Ädla Virken logo" class="w-[8vw] sm:w-10 xl:w-[3vw]"></a>
-  <ul class="fixed top-0 left-0 flex flex-col w-full px-[4vw] py-8 bg-white gap-4 items-start shadow-lg">
-    <!-- <li class="group flex flex-col gap-4 w-full px-[6vw]">
-      <p class="rounded ">För skogsföretag<i class="dropdown-arrow fa-solid fa-chevron-up ml-1"></i></p>
-      <ul class="flex flex-col gap-4 hidden">
-        <li><a href="" class="">Skapa annons</a></li>
-        <li><a href="">Mina annonser</a></li>
-      </ul>
+  <ul id="menu" class="overflow-y-scroll fixed top-0 left-0 flex flex-col w-full min-h-[20vh] px-[4vw] py-8 bg-white gap-4 items-start shadow-lg transition ease-linear duration-300">
+    <li class="flex flex-row items-center justify-between w-full px-4 py-[1.5vw] sm:py-3">
+      <a href=""><img src="../images/adla-virken-logo.svg" alt="Ädla Virken logo" class="w-[8vw] sm:w-10 xl:w-[3vw]"></a>
+      <div onclick="closeMenu()"><i class="fa-solid fa-xmark text-[3.5vw] md:text-xl"></i></div>
     </li>
-    <li class="group px-[6vw] flex flex-col gap-4">
-      <p class="rounded ">För uppköpare<i class="dropdown-arrow fa-solid fa-chevron-down ml-1"></i></p>
-      <ul class="flex flex-col gap-4 hidden">
-        <li class=""><a href="">Skicka begäran</a></li>
-        <li><a href="">Mina begäran</a></li>
-      </ul>
-    </li> -->
-    <li class="group w-full flex flex-col">
+    <li class="group w-full flex flex-col dropdownActivator">
       <div class="flex flex-row items-center justify-between rounded px-4 py-[1.5vw] sm:py-3 active:bg-grey-light">
-        <p class="">Om oss</p>
-        <i class="dropdown-arrow fa-solid fa-chevron-down ml-1"></i>
+        <p class="select-none text-[3vw] md:text-lg">För skogsföretag</p>
+        <i class="dropdown-arrow fa-solid fa-chevron-down ml-1 text-[3vw] md:text-lg"></i>
       </div>
-      <ul class="flex flex-col px-[4vw]">
-        <li class="rounded px-4 py-[1.5vw] sm:py-3 active:bg-grey-light"><a href="">Om Ädla Virken</a></li>
-        <li class="rounded px-4 py-[1.5vw] sm:py-3 active:bg-grey-light"><a href="">Kontakta oss</a></li>
+      <ul class="dropdown flex-col px-[4vw] hidden">
+        <li class="rounded px-4 py-[1.5vw] sm:py-3 active:bg-grey-light text-[3vw] md:text-lg"><a href="">Skapa annons</a></li>
+        <li class="rounded px-4 py-[1.5vw] sm:py-3 active:bg-grey-light text-[3vw] md:text-lg"><a href="">Mina annonser</a></li>
       </ul>
     </li>
-    <li class="flex flex-row gap-4 mx-auto"><button type="button" class="btn-regular w-32">Registrera</button><button type="button" class="btn-filled w-32">Logga in</button></li>
+    <li class="group w-full flex flex-col dropdownActivator">
+      <div class="flex flex-row items-center justify-between rounded px-4 py-[1.5vw] sm:py-3 active:bg-grey-light">
+        <p class="select-none text-[3vw] md:text-lg">För uppköpare</p>
+        <i class="dropdown-arrow fa-solid fa-chevron-down ml-1 text-[3vw] md:text-lg"></i>
+      </div>
+      <ul class="dropdown flex-col px-[4vw] hidden">
+        <li class="rounded px-4 py-[1.5vw] sm:py-3 active:bg-grey-light text-[3vw] md:text-lg"><a href="">Skicka begäran</a></li>
+        <li class="rounded px-4 py-[1.5vw] sm:py-3 active:bg-grey-light text-[3vw] md:text-lg"><a href="">Mina begäran</a></li>
+      </ul>
+    </li>
+    <li class="group w-full flex flex-col dropdownActivator">
+      <div class="flex flex-row items-center justify-between rounded px-4 py-[1.5vw] sm:py-3 active:bg-grey-light">
+        <p class="select-none text-[3vw] md:text-lg">Om oss</p>
+        <i class="dropdown-arrow fa-solid fa-chevron-down ml-1 text-[3vw] md:text-lg"></i>
+      </div>
+      <ul class="dropdown flex-col px-[4vw] hidden">
+        <li class="rounded px-4 py-[1.5vw] sm:py-3 active:bg-grey-light text-[3vw] md:text-lg"><a href="">Om Ädla Virken</a></li>
+        <li class="rounded px-4 py-[1.5vw] sm:py-3 active:bg-grey-light text-[3vw] md:text-lg"><a href="">Kontakta oss</a></li>
+      </ul>
+    </li>
+    <li class="flex flex-row mx-auto gap-[4vw] sm:gap-4">
+      <button type="button" class="btn-regular w-[25vw] py-[2vw] px-[2vw] text-[3.5vw] sm:py-[0.7rem] sm:w-32 sm:text-sm md:text-base lg:px-0">Registrera</button>
+      <button type="button" class="btn-filled w-[25vw] py-[2vw] px-[2vw] text-[3.5vw] sm:py-[0.7rem] sm:w-32 sm:text-sm md:text-base lg:px-0">Logga in</button>
+    </li>
   </ul>
-  <div><i class="fa fa-bars text-[6vw] sm:text-[1.6rem] xl:text-[2vw]"></i></div>
+  <div onclick="openMenu()"><i class="fa fa-bars text-[6vw] sm:text-[1.6rem] xl:text-[2vw]"></i></div>
   </nav>
 
 <script src="../javascript/main.js"></script>

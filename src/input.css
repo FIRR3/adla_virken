@@ -10,13 +10,13 @@
     @apply font-header text-4xl
   }
   p, a, button{
-    @apply font-content font-light text-[clamp(0.5vw,_1rem,_4vw)]
+    @apply font-content font-light
   }
 }
 @layer components{
   /* button styles */
   .btn-regular, .btn-filled{
-    @apply font-medium text-center tracking-wide rounded-md cursor-pointer py-2 px-[2vw] lg:px-0
+    @apply font-medium text-center rounded-[1vw] cursor-pointer sm:rounded-md xl:rounded-lg
   }
   .btn-regular{
     @apply bg-white text-primary-full border-2 border-primary-full hover:bg-grey-light

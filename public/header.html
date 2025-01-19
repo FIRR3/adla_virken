@@ -17,10 +17,11 @@
   <nav class="fixed top-0 left-0 w-full flex flex-row items-center justify-between shadow-lg px-[4vw]
   h-[15vw] sm:h-[20vw] md:h-[15vh]">
   <a href=""><img src="../images/adla-virken-logo.svg" alt="Ädla Virken logo" class="w-[8vw] sm:w-10 xl:w-[3vw]"></a>
-  <ul id="menu" class="overflow-y-scroll fixed top-0 left-0 flex flex-col w-full min-h-[20vh] px-[4vw] py-8 bg-white gap-4 items-start shadow-lg transition ease-linear duration-300">
-    <li class="flex flex-row items-center justify-between w-full px-4 py-[1.5vw] sm:py-3">
+  <ul id="menu" class="overflow-y-scroll fixed left-0 flex flex-col w-full min-h-[20vh] px-[4vw] py-8 bg-white items-start shadow-lg transition ease-linear duration-300
+  lg:relative lg:flex-row">
+    <li class="flex flex-row items-center justify-between w-full px-4 py-[2vw] sm:py-4">
       <a href=""><img src="../images/adla-virken-logo.svg" alt="Ädla Virken logo" class="w-[8vw] sm:w-10 xl:w-[3vw]"></a>
-      <div onclick="closeMenu()"><i class="fa-solid fa-xmark text-[3.5vw] md:text-xl"></i></div>
+      <div onclick="closeMenu()"><i class="fa-solid fa-xmark text-[4vw] md:text-2xl"></i></div>
     </li>
     <li class="group w-full flex flex-col dropdownActivator">
       <div class="flex flex-row items-center justify-between rounded px-4 py-[1.5vw] sm:py-3 active:bg-grey-light">
@@ -57,7 +58,13 @@
       <button type="button" class="btn-filled w-[25vw] py-[2vw] px-[2vw] text-[3.5vw] sm:py-[0.7rem] sm:w-32 sm:text-sm md:text-base lg:px-0">Logga in</button>
     </li>
   </ul>
-  <div onclick="openMenu()"><i class="fa fa-bars text-[6vw] sm:text-[1.6rem] xl:text-[2vw]"></i></div>
+  <div class="flex flex-row gap-6 items-center lg:hidden">
+    <div class="hidden flex-row gap-[4vw] sm:gap-4 sm:max-lg:flex">
+      <button type="button" class="btn-regular w-[22vw] py-[1vw] px-[2vw] text-[3vw] sm:py-[0.7rem] sm:w-32 sm:text-base lg:px-0">Registrera</button>
+      <button class="btn-filled w-[22vw] py-[1vw] px-[2vw] text-[3vw] sm:py-[0.7rem] sm:w-32 sm:text-base lg:px-0">Logga in</button>
+    </div>
+    <div onclick="openMenu()"><i class="fa fa-bars text-[6vw] sm:text-[1.6rem] xl:text-[2vw]"></i></div>  
+  </div>
   </nav>
 
 <script src="../javascript/main.js"></script>

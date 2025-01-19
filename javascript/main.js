@@ -1,7 +1,9 @@
 // menu for mobile
 const menu = document.getElementById("menu")
 
-menu.style.top = '-' + menu.offsetHeight + 'px';
+window.addEventListener("load", () =>{
+  menu.style.top = '-' + menu.offsetHeight + 'px';
+})
 
 const openMenu = () =>{
   menu.style.top = 0 + 'px';

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,78 +11,16 @@
   <!-- fonts (Manrope & Noto Sans) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
   <title>Ädla Virken</title>
 </head>
+
 <body>
-  <nav class="fixed top-0 left-0 w-full flex flex-row items-center justify-between shadow-lg px-[4vw]
-  h-[15vw] sm:h-[20vw] md:h-[15vh] md:min-h-16 bg-white">
-  <a href=""><img src="../images/adla-virken-logo.svg" alt="Ädla Virken logo" class="w-[8vw] sm:w-10 xl:w-[3.5vw] 2xl:w-[3vw]"></a>
-  <ul id="menu" class="max-lg:fixed left-0 flex flex-col w-full min-h-[20vh] px-[4vw] py-[4vw] bg-white items-start shadow-lg transition ease-linear duration-300 
-  md:py-8 md:px-[8vw] lg:flex-row lg:w-fit lg:gap-4 lg:bg-none lg:shadow-none lg:min-h-0 lg:px-0 lg:py-0">
-    <li class="flex flex-row items-center justify-between w-full px-4 py-[2vw] sm:py-4 lg:hidden">
-      <a href=""><img src="../images/adla-virken-logo.svg" alt="Ädla Virken logo" class="w-[8vw] sm:w-10 xl:w-[3vw]"></a>
-      <div onclick="closeMenu()"><i class="fa-solid fa-xmark text-[4vw] md:text-2xl"></i></div>
-    </li>
-
-    <li class="dropdown-activator group max-lg:w-full mx-lg:flex flex-col cursor-pointer">
-      <div class="dropdown-header bg-none flex flex-row items-center justify-between rounded px-4 py-[1.5vw] lg:group-hover:bg-grey-light lg:bg-none lg:px-4 lg:py-3 active:bg-grey-light hover:bg-grey-light">
-        <p class="select-none">För skogsföretag</p>
-        <i class="dropdown-arrow fa-solid fa-chevron-down ml-1 text-[3vw] md:text-lg lg:text-base"></i>
-      </div>
-      <ul class="dropdown hidden">
-        <li><a href="">Skapa annons</a></li>
-        <li><a href="">Mina annonser</a></li>
-      </ul>
-    </li>
-    <li class="dropdown-activator group max-lg:w-full mx-lg:flex flex-col cursor-pointer">
-      <div class="dropdown-header bg-none flex flex-row items-center justify-between rounded px-4 py-[1.5vw] lg:group-hover:bg-grey-light lg:bg-none lg:px-4 lg:py-3 active:bg-grey-light hover:bg-grey-light">
-        <p class="select-none">För uppköpare</p>
-        <i class="dropdown-arrow fa-solid fa-chevron-down ml-1 text-[3vw] md:text-lg lg:text-base"></i>
-      </div>
-      <ul class="dropdown hidden">
-        <li><a href="">Skicka begäran</a></li>
-        <li><a href="">Mina begäran</a></li>
-      </ul>
-    </li>
-    <li class="dropdown-activator group max-lg:w-full mx-lg:flex flex-col cursor-pointer">
-      <div class="dropdown-header bg-none flex flex-row items-center justify-between rounded px-4 py-[1.5vw] lg:group-hover:bg-grey-light lg:bg-none lg:px-4 lg:py-3 active:bg-grey-light hover:bg-grey-light">
-        <p class="select-none">Om oss</p>
-        <i class="dropdown-arrow fa-solid fa-chevron-down ml-1 text-[3vw] md:text-lg lg:text-base"></i>
-      </div>
-      <ul class="dropdown hidden">
-        <li><a href="">Om Ädla Virken</a></li>
-        <li><a href="">Kontakta oss</a></li>
-      </ul>
-    </li>
-    <li class="flex flex-row mx-auto gap-[4vw] mt-auto sm:gap-4 lg:mx-0 lg:mt-0">
-      <button type="button" class="btn-regular w-[25vw] sm:w-36 md:w-32">Registrera</button>
-      <button type="button" class="btn-filled w-[25vw] sm:w-36 md:w-32">Logga in</button>
-    </li>
-  </ul>
-
-  <div class="flex flex-row gap-6 items-center lg:hidden">
-    <div class="hidden flex-row gap-[4vw] sm:gap-4 sm:max-lg:flex">
-      <button type="button" class="btn-regular w-[25vw] sm:w-32">Registrera</button>
-      <button type="button" class="btn-filled w-[25vw] sm:w-32">Logga in</button>
-    </div>
-    <div id="menuBar" onclick="openMenu()"><i class="fa fa-bars text-[6vw] sm:text-[1.6rem] xl:text-[2vw]"></i></div>  
-  </div>
-  </nav>
-
-  <!-- hero section -->
-  <section class="flex flex-col justify-start items-center w-full h-[130vw] min-h-fit px-10
-  bg-[url('../images/tree-bark.png')] bg-center bg-cover pt-[30vw] max-sm:pb-[2vw] gap-[10vw] sm:gap-10 sm:h-[70vh] sm:pt-[40vw] md:h-screen md:pt-0 md:px-20 md:justify-center md:items-start">
-  <div class="flex flex-col text-center gap-[4vw] sm:gap-4 md:text-start">
-    <h1 class="text-white"><span class="font-extralight">Ädla virken</span>: kvalitetsvirke<br>för kvalitetspriser</h1>
-    <p class="text-white">Vi är den framtida marknadsplatsen för svenskt kvalitetsvirke.</p>
-  </div>
-  <div class="flex flex-row gap-[4vw] sm:gap-4">
-    <a href="" class="btn-regular w-[30vw] sm:w-44 border-white hover-border hover:border-grey-light">Sälj virke</a>
-    <a href="" class="btn-filled w-[30vw] sm:w-44 ">Beställ virke</a>
-  </div>
-  </section>
+  <p class="~text-sm/3xl">hello</p>
 
   <script src="../javascript/main.js"></script>
 </body>
+
 </html>

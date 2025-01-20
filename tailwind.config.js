@@ -1,7 +1,14 @@
+import fluid, { extract, screens, fontSize } from 'fluid-tailwind'
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./public/*.html", "./javascript/*.js", "./src/*.css"],
+  content: {
+    files:   ["./public/*.html", "./javascript/*.js", "./src/*.css"],
+    extract,
+  },
   theme: {
+    screens, // Tailwind's default screens, in `rem`
+    fontSize, // Tailwind's default font sizes, in `rem` (including line heights)
     colors: {
       'primary':{
         "full": "#6fab4e", //rgba(111, 171, 78, 1)
@@ -15,12 +22,23 @@ module.exports = {
       'grey-light': "#ebebeb", //"rgba(144, 144, 144, 0.15)"
     },
     fontFamily:{
-      'header': 'Manrope, sans-serif',
-      'content': 'Noto sans, sans-serif',
+      'manrope': 'Manrope, sans-serif',
+      'noto-sans': 'Noto sans, sans-serif',
     },
     extend: {
+      screens: {
+        xs: '20rem'
+      },
+      fontSize: {
+        'header': ''
+      },
+      
     },
   },
-  plugins: [],
+  plugins: [
+    fluid({
+      checkSC144: false // default: true
+    })
+  ],
 }
 

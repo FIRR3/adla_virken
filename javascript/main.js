@@ -11,7 +11,7 @@ const closeMenu = () =>{
 window.addEventListener("load", () =>{
   var width = window.innerWidth
   if (width >= 1024) return
-  menu.style.top = '-' + menu.offsetHeight + 'px';
+  closeMenu()
 })
 //close menu when clicking on window
 window.addEventListener("click", (e) =>{
@@ -46,7 +46,7 @@ dropdownActivators.forEach(activator =>{
     }
   })
   //close nav dropdown if user clicks on window
-  //creates bugs on mobile
+  //doesn't apply on mobile
   window.addEventListener("click", (e) =>{
     var width = window.innerWidth
     if (width < 1024) return

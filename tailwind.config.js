@@ -20,6 +20,8 @@ module.exports = {
       'black': "#000000",
       'grey': "#909090",
       'grey-light': "#ebebeb", //"rgba(144, 144, 144, 0.15)"
+
+      'transparent': "00FFFFFF",
     },
     fontFamily:{
       'manrope': 'Manrope, sans-serif',
@@ -30,7 +32,9 @@ module.exports = {
         xs: '20rem'
       },
       fontSize: {
-        'header': ''
+        'header': '3.5rem',
+        'sub': '2.25rem',
+        'paragraph': '1rem',
       },
       
     },

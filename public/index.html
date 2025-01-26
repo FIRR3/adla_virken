@@ -16,9 +16,31 @@
     rel="stylesheet">
   <title>Ädla Virken</title>
 </head>
+<body class="font-noto-sans bg-secondary h-[200vh]">
+  <header class="fixed top-0 left-0 w-full">
+    <nav class="relative flex flex-row justify-between items-center bg-primary-transparent w-full ~h-14/32 ~px-6/16">
+      <img src="../images/adla-virken-logo.svg" alt="" class="~w-8/12">
+      <ul id="menu" class="max-lg:bg-white w-full absolute left-0 ~top-14/32 font-normal 
+      max-lg:h-0 max-lg:overflow-hidden 
+      ~lg:~gap-4/8 lg:top-0 lg:px-0 lg:w-fit lg:relative lg:flex lg:flex-row lg:items-center transition-all duration-1000">
+        <li class="rounded relative group cursor-pointer">
+          <div class="inline-flex flex-row justify-between items-center ~gap-1/2 rounded w-full active:bg-grey-light lg:group-hover:bg-grey-light lg:justify-normal ~px-6/16 ~py-2/5 lg:py-3 lg:px-4">
+            <p class="~/lg:~text-sm/base 2xl:~text-lg/xl">För skogsföretag</p>
+            <i class="fa fa-chevron-down ~/lg:~text-xs/base 2xl:~text-lg/xl"></i>
+          </div>
+          <ul class="hidden flex-col lg:absolute lg:bg-white lg:w-full lg:rounded lg:group-hover:flex">
+            <li class="~px-6/16 ~py-2/5 lg:py-3 lg:px-4 rounded lg:hover:bg-grey-light active:bg-grey-light"><a href="" class="~/lg:~text-sm/base 2xl:~text-lg/xl ~/lg:~px-2/10">Köp virke</a></li>
+          </ul>
+        </li>
+        <li class="w-fit mx-auto ~/lg:~my-2/6">
+          <button class="~py-2/4 lg:py-3 ~w-24/48 lg:w-32 rounded border-[0.25vw] lg:border-2 font-medium ~/lg:~text-sm/base 2xl:~text-lg/xl">Registrera</button>
+          <button class="~py-2/4 lg:py-3 ~w-24/48 lg:w-32 rounded border-[0.25vw] lg:border-2 font-medium ~/lg:~text-sm/base 2xl:~text-lg/xl">Logga in</button>
+        </li>
+      </ul>
+      <div id="bar" class="lg:hidden cursor-pointer"><i class="fa fa-bars ~text-lg/3xl"></i></div>
+    </nav>
+  </header>
 
-<body>
-  <p class="~text-sm/3xl">hello</p>
 
   <script src="../javascript/main.js"></script>
 </body>

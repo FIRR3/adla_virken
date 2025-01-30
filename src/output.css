@@ -1501,6 +1501,11 @@ video {
   line-height: /* error - Missing end value */;
 }
 
+.\~text-5xl\/6xl {
+  font-size: clamp(3rem,2.8rem + 0.99vw,3.75rem)/* fluid type from 3rem at 20rem to 3.75rem at 96rem */;
+  line-height: clamp(3rem,2.8rem + 0.99vw,3.75rem)/* fluid from 3rem at 20rem to 3.75rem at 96rem */;
+}
+
 .\~top-14 /* error - Missing end value */ {
 }
 
@@ -1974,6 +1979,16 @@ error - Start and end breakpoints are both `96rem`
     line-height: 1.75rem;
   }
 
+  .md\:text-5xl {
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+
+  .md\:text-6xl {
+    font-size: 3.75rem;
+    line-height: 3.75rem;
+  }
+
   .md\:\~text-base\/2xl {
     font-size: clamp(1rem,0.87rem + 0.66vw,1.5rem)/* fluid type from 1rem at 20rem to 1.5rem at 96rem */;
     line-height: clamp(1.5rem,1.37rem + 0.66vw,2rem)/* fluid from 1.5rem at 20rem to 2rem at 96rem */;
@@ -1987,6 +2002,22 @@ error - Start and end breakpoints are both `96rem`
   .md\:\~md\:\~text-base\/lg {
     font-size: clamp(1rem,0.875rem + 0.26vw,1.125rem)/* fluid type from 1rem at 48rem to 1.125rem at 96rem */;
     line-height: clamp(1.5rem,1.25rem + 0.52vw,1.75rem)/* fluid from 1.5rem at 48rem to 1.75rem at 96rem */;
+  }
+
+  .md\:\~md\:\~text-4xl\/5xl {
+    font-size: clamp(2.25rem,1.5rem + 1.56vw,3rem)/* fluid type from 2.25rem at 48rem to 3rem at 96rem */;
+    line-height: clamp(2.5rem,2rem + 1.04vw,3rem)/* fluid from 2.5rem at 48rem to 3rem at 96rem */;
+  }
+
+  .md\:\~md\:\~text-5xl {
+    /*
+error - Fluid variants can only be used with fluid utilities
+*/
+  }
+
+  .md\:\~md\:\~text-5xl\/6xl {
+    font-size: clamp(3rem,2.25rem + 1.56vw,3.75rem)/* fluid type from 3rem at 48rem to 3.75rem at 96rem */;
+    line-height: clamp(3rem,2.25rem + 1.56vw,3.75rem)/* fluid from 3rem at 48rem to 3.75rem at 96rem */;
   }
 
   .md\:\~md\:\~w-36\/48 {

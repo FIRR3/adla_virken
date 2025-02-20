@@ -5,6 +5,24 @@
 @layer base {
 }
 @layer components {
+  .btn-regular, .btn-filled{
+    @apply block rounded border-[2px] md:border-[0.3vw] text-center font-medium ~py-3/6 ~/md:~text-base/2xl ~/md:~w-40/52 max-xs:w-full md:py-3 md:text-base md:~md:~w-36/48 lg:border-2 2xl:~text-base/xl cursor-pointer
+  }
+  .btn-regular{
+    @apply bg-white border-primary-full text-primary-full hover:bg-grey-light
+  }
+  .btn-filled{
+    @apply border-primary-full bg-primary-full text-white hover:border-primary-transparent hover:bg-primary-transparent
+  }
 }
 @layer utilities {
+  .p-txt {
+    @apply ~/md:~text-base/2xl md:text-start md:text-base 2xl:~text-base/xl
+  }
+  .title-txt{
+    @apply text-center font-manrope ~/md:~text-4xl/7xl md:text-start md:~md:~text-5xl/6xl 2xl:~2xl:~text-base/xl
+  }
+  .sub-txt{
+    @apply text-start font-manrope ~/md:~text-2xl/5xl md:text-start md:~md:~text-3xl/4xl 2xl:~2xl:~text-sm/lg
+  }
 }

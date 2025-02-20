@@ -554,6 +554,80 @@ video {
   display: none;
 }
 
+.btn-regular, .btn-filled {
+  display: block;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  border-width: 2px;
+  text-align: center;
+  font-weight: 500;
+  padding-top: clamp(0.75rem,0.55rem + 0.99vw,1.5rem)/* fluid from 0.75rem at 20rem to 1.5rem at 96rem */;
+  padding-bottom: clamp(0.75rem,0.55rem + 0.99vw,1.5rem)/* fluid from 0.75rem at 20rem to 1.5rem at 96rem */;
+  font-size: clamp(1rem,0.64rem + 1.79vw,1.5rem)/* fluid type from 1rem at 20rem to 1.5rem at 48rem */;
+  line-height: clamp(1.5rem,1.14rem + 1.79vw,2rem)/* fluid from 1.5rem at 20rem to 2rem at 48rem */;
+  width: clamp(10rem,7.86rem + 10.71vw,13rem)/* fluid from 10rem at 20rem to 13rem at 48rem */;
+}
+
+@media not all and (min-width: 20rem) {
+  .btn-regular, .btn-filled {
+    width: 100%;
+  }
+}
+
+@media (min-width: 48rem) {
+  .btn-regular, .btn-filled {
+    border-width: 0.3vw;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    width: clamp(9rem,6rem + 6.25vw,12rem)/* fluid from 9rem at 48rem to 12rem at 96rem */;
+  }
+}
+
+@media (min-width: 64rem) {
+  .btn-regular, .btn-filled {
+    border-width: 2px;
+  }
+}
+
+@media (min-width: 96rem) {
+  .btn-regular, .btn-filled {
+    font-size: clamp(1rem,0.93rem + 0.33vw,1.25rem)/* fluid type from 1rem at 20rem to 1.25rem at 96rem */;
+    line-height: clamp(1.5rem,1.43rem + 0.33vw,1.75rem)/* fluid from 1.5rem at 20rem to 1.75rem at 96rem */;
+  }
+}
+
+.btn-regular {
+  --tw-border-opacity: 1;
+  border-color: rgb(111 171 78 / var(--tw-border-opacity, 1));
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
+  --tw-text-opacity: 1;
+  color: rgb(111 171 78 / var(--tw-text-opacity, 1));
+}
+
+.btn-regular:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(235 235 235 / var(--tw-bg-opacity, 1));
+}
+
+.btn-filled {
+  --tw-border-opacity: 1;
+  border-color: rgb(111 171 78 / var(--tw-border-opacity, 1));
+  --tw-bg-opacity: 1;
+  background-color: rgb(111 171 78 / var(--tw-bg-opacity, 1));
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+
+.btn-filled:hover {
+  --tw-border-opacity: 1;
+  border-color: rgb(127 177 100 / var(--tw-border-opacity, 1));
+  --tw-bg-opacity: 1;
+  background-color: rgb(127 177 100 / var(--tw-bg-opacity, 1));
+}
+
 .visible {
   visibility: visible;
 }
@@ -745,6 +819,10 @@ video {
 
 .h-screen {
   height: 100vh;
+}
+
+.h-svh {
+  height: 100svh;
 }
 
 .min-h-0 {
@@ -1050,8 +1128,12 @@ video {
   border-width: 2px;
 }
 
-.border-\[0\.25vw\] {
-  border-width: 0.25vw;
+.border-\[2px\] {
+  border-width: 2px;
+}
+
+.border-s {
+  border-inline-start-width: 1px;
 }
 
 .border-primary-full {
@@ -1501,11 +1583,6 @@ video {
   line-height: /* error - Missing end value */;
 }
 
-.\~text-5xl\/6xl {
-  font-size: clamp(3rem,2.8rem + 0.99vw,3.75rem)/* fluid type from 3rem at 20rem to 3.75rem at 96rem */;
-  line-height: clamp(3rem,2.8rem + 0.99vw,3.75rem)/* fluid from 3rem at 20rem to 3.75rem at 96rem */;
-}
-
 .\~top-14 /* error - Missing end value */ {
 }
 
@@ -1545,6 +1622,17 @@ video {
   margin-top: clamp(2rem,1.74rem + 1.32vw,3rem)/* fluid from 2rem at 20rem to 3rem at 96rem */;
 }
 
+.\~mt-5\/10 {
+  margin-top: clamp(1.25rem,0.92rem + 1.64vw,2.5rem)/* fluid from 1.25rem at 20rem to 2.5rem at 96rem */;
+}
+
+.\~mt-5 /* error - Missing end value */ {
+}
+
+.\~mt-8\/16 {
+  margin-top: clamp(2rem,1.47rem + 2.63vw,4rem)/* fluid from 2rem at 20rem to 4rem at 96rem */;
+}
+
 .\~size-24 /* error - Missing end value */ {
 }
 
@@ -1581,10 +1669,6 @@ video {
 }
 
 .\~w-24 /* error - Missing end value */ {
-}
-
-.\~w-24\/36 {
-  width: clamp(6rem,5.21rem + 3.95vw,9rem)/* fluid from 6rem at 20rem to 9rem at 96rem */;
 }
 
 .\~w-28 /* error - Missing end value */ {
@@ -1638,15 +1722,26 @@ video {
 .\~px-12 /* error - Missing end value */ {
 }
 
+.\~px-14 /* error - Missing end value */ {
+}
+
+.\~px-16 /* error - Missing end value */ {
+}
+
 .\~px-2 /* error - Missing end value */ {
 }
 
 .\~px-4 /* error - Missing end value */ {
 }
 
-.\~px-4\/20 {
-  padding-left: clamp(1rem,-0.05rem + 5.26vw,5rem)/* fluid from 1rem at 20rem to 5rem at 96rem */;
-  padding-right: clamp(1rem,-0.05rem + 5.26vw,5rem)/* fluid from 1rem at 20rem to 5rem at 96rem */;
+.\~px-4\/24 {
+  padding-left: clamp(1rem,-0.32rem + 6.58vw,6rem)/* fluid from 1rem at 20rem to 6rem at 96rem */;
+  padding-right: clamp(1rem,-0.32rem + 6.58vw,6rem)/* fluid from 1rem at 20rem to 6rem at 96rem */;
+}
+
+.\~px-4\/6 {
+  padding-left: clamp(1rem,0.87rem + 0.66vw,1.5rem)/* fluid from 1rem at 20rem to 1.5rem at 96rem */;
+  padding-right: clamp(1rem,0.87rem + 0.66vw,1.5rem)/* fluid from 1rem at 20rem to 1.5rem at 96rem */;
 }
 
 .\~px-6 /* error - Missing end value */ {
@@ -1661,11 +1756,6 @@ video {
 }
 
 .\~py-2 /* error - Missing end value */ {
-}
-
-.\~py-2\/4 {
-  padding-top: clamp(0.5rem,0.37rem + 0.66vw,1rem)/* fluid from 0.5rem at 20rem to 1rem at 96rem */;
-  padding-bottom: clamp(0.5rem,0.37rem + 0.66vw,1rem)/* fluid from 0.5rem at 20rem to 1rem at 96rem */;
 }
 
 .\~py-2\/5 {
@@ -1688,6 +1778,72 @@ video {
 }
 
 .\~pb-3 /* error - Missing end value */ {
+}
+
+.p-txt {
+  font-size: clamp(1rem,0.64rem + 1.79vw,1.5rem)/* fluid type from 1rem at 20rem to 1.5rem at 48rem */;
+  line-height: clamp(1.5rem,1.14rem + 1.79vw,2rem)/* fluid from 1.5rem at 20rem to 2rem at 48rem */;
+}
+
+@media (min-width: 48rem) {
+  .p-txt {
+    text-align: start;
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width: 96rem) {
+  .p-txt {
+    font-size: clamp(1rem,0.93rem + 0.33vw,1.25rem)/* fluid type from 1rem at 20rem to 1.25rem at 96rem */;
+    line-height: clamp(1.5rem,1.43rem + 0.33vw,1.75rem)/* fluid from 1.5rem at 20rem to 1.75rem at 96rem */;
+  }
+}
+
+.title-txt {
+  text-align: center;
+  font-family: Manrope, sans-serif;
+  font-size: clamp(2.25rem,0.64rem + 8.04vw,4.5rem)/* fluid type from 2.25rem at 20rem to 4.5rem at 48rem */;
+  line-height: clamp(2.5rem,1.07rem + 7.14vw,4.5rem)/* fluid from 2.5rem at 20rem to 4.5rem at 48rem */;
+}
+
+@media (min-width: 48rem) {
+  .title-txt {
+    text-align: start;
+    font-size: clamp(3rem,2.25rem + 1.56vw,3.75rem)/* fluid type from 3rem at 48rem to 3.75rem at 96rem */;
+    line-height: clamp(3rem,2.25rem + 1.56vw,3.75rem)/* fluid from 3rem at 48rem to 3.75rem at 96rem */;
+  }
+}
+
+@media (min-width: 96rem) {
+  .title-txt {
+    /*
+error - Start and end breakpoints are both `96rem`
+*/
+  }
+}
+
+.sub-txt {
+  text-align: start;
+  font-family: Manrope, sans-serif;
+  font-size: clamp(1.5rem,0.43rem + 5.36vw,3rem)/* fluid type from 1.5rem at 20rem to 3rem at 48rem */;
+  line-height: clamp(2rem,1.29rem + 3.57vw,3rem)/* fluid from 2rem at 20rem to 3rem at 48rem */;
+}
+
+@media (min-width: 48rem) {
+  .sub-txt {
+    text-align: start;
+    font-size: clamp(1.875rem,1.5rem + 0.781vw,2.25rem)/* fluid type from 1.875rem at 48rem to 2.25rem at 96rem */;
+    line-height: clamp(2.25rem,2rem + 0.52vw,2.5rem)/* fluid from 2.25rem at 48rem to 2.5rem at 96rem */;
+  }
+}
+
+@media (min-width: 96rem) {
+  .sub-txt {
+    /*
+error - Start and end breakpoints are both `96rem`
+*/
+  }
 }
 
 .hover\:border-grey-light:hover {
@@ -1715,6 +1871,15 @@ video {
   background-color: rgb(235 235 235 / var(--tw-bg-opacity, 1));
 }
 
+.\~md\:\~w-32\/36 {
+  width: clamp(8rem,7rem + 2.08vw,9rem)/* fluid from 8rem at 48rem to 9rem at 96rem */;
+}
+
+.\~\/md\:\~text-2xl\/5xl {
+  font-size: clamp(1.5rem,0.43rem + 5.36vw,3rem)/* fluid type from 1.5rem at 20rem to 3rem at 48rem */;
+  line-height: clamp(2rem,1.29rem + 3.57vw,3rem)/* fluid from 2rem at 20rem to 3rem at 48rem */;
+}
+
 .\~\/md\:\~text-4xl\/7xl {
   font-size: clamp(2.25rem,0.64rem + 8.04vw,4.5rem)/* fluid type from 2.25rem at 20rem to 4.5rem at 48rem */;
   line-height: clamp(2.5rem,1.07rem + 7.14vw,4.5rem)/* fluid from 2.5rem at 20rem to 4.5rem at 48rem */;
@@ -1733,11 +1898,6 @@ video {
   gap: clamp(0.5rem,-1.5rem + 3.13vw,1.5rem)/* fluid from 0.5rem at 64rem to 1.5rem at 96rem */;
 }
 
-.\~\/lg\:\~text-xs\/base {
-  font-size: clamp(0.75rem,0.64rem + 0.57vw,1rem)/* fluid type from 0.75rem at 20rem to 1rem at 64rem */;
-  line-height: clamp(1rem,0.77rem + 1.14vw,1.5rem)/* fluid from 1rem at 20rem to 1.5rem at 64rem */;
-}
-
 .\~\/lg\:\~my-2\/6 {
   margin-top: clamp(0.5rem,0.05rem + 2.27vw,1.5rem)/* fluid from 0.5rem at 20rem to 1.5rem at 64rem */;
   margin-bottom: clamp(0.5rem,0.05rem + 2.27vw,1.5rem)/* fluid from 0.5rem at 20rem to 1.5rem at 64rem */;
@@ -1746,12 +1906,6 @@ video {
 .\~\/lg\:\~px-2\/10 {
   padding-left: clamp(0.5rem,-0.41rem + 4.55vw,2.5rem)/* fluid from 0.5rem at 20rem to 2.5rem at 64rem */;
   padding-right: clamp(0.5rem,-0.41rem + 4.55vw,2.5rem)/* fluid from 0.5rem at 20rem to 2.5rem at 64rem */;
-}
-
-.\~2xl\:\~text-base\/xl {
-  /*
-error - Start and end breakpoints are both `96rem`
-*/
 }
 
 @media not all and (min-width: 64rem) {
@@ -1805,6 +1959,10 @@ error - Start and end breakpoints are both `96rem`
 
   .xs\:flex-row {
     flex-direction: row;
+  }
+
+  .xs\:\~xs\/md\:\~w-36\/40 {
+    width: clamp(9rem,8.29rem + 3.57vw,10rem)/* fluid from 9rem at 20rem to 10rem at 48rem */;
   }
 }
 
@@ -1887,6 +2045,10 @@ error - Start and end breakpoints are both `96rem`
     display: none;
   }
 
+  .md\:aspect-square {
+    aspect-ratio: 1 / 1;
+  }
+
   .md\:h-\[15vh\] {
     height: 15vh;
   }
@@ -1926,6 +2088,10 @@ error - Start and end breakpoints are both `96rem`
 
   .md\:justify-center {
     justify-content: center;
+  }
+
+  .md\:border-\[0\.3vw\] {
+    border-width: 0.3vw;
   }
 
   .md\:px-20 {
@@ -1979,40 +2145,9 @@ error - Start and end breakpoints are both `96rem`
     line-height: 1.75rem;
   }
 
-  .md\:text-5xl {
-    font-size: 3rem;
-    line-height: 3rem;
-  }
-
-  .md\:text-6xl {
-    font-size: 3.75rem;
-    line-height: 3.75rem;
-  }
-
-  .md\:\~text-base\/2xl {
-    font-size: clamp(1rem,0.87rem + 0.66vw,1.5rem)/* fluid type from 1rem at 20rem to 1.5rem at 96rem */;
-    line-height: clamp(1.5rem,1.37rem + 0.66vw,2rem)/* fluid from 1.5rem at 20rem to 2rem at 96rem */;
-  }
-
-  .md\:\~text-base\/lg {
-    font-size: clamp(1rem,0.967rem + 0.164vw,1.125rem)/* fluid type from 1rem at 20rem to 1.125rem at 96rem */;
-    line-height: clamp(1.5rem,1.43rem + 0.33vw,1.75rem)/* fluid from 1.5rem at 20rem to 1.75rem at 96rem */;
-  }
-
-  .md\:\~md\:\~text-base\/lg {
-    font-size: clamp(1rem,0.875rem + 0.26vw,1.125rem)/* fluid type from 1rem at 48rem to 1.125rem at 96rem */;
-    line-height: clamp(1.5rem,1.25rem + 0.52vw,1.75rem)/* fluid from 1.5rem at 48rem to 1.75rem at 96rem */;
-  }
-
-  .md\:\~md\:\~text-4xl\/5xl {
-    font-size: clamp(2.25rem,1.5rem + 1.56vw,3rem)/* fluid type from 2.25rem at 48rem to 3rem at 96rem */;
-    line-height: clamp(2.5rem,2rem + 1.04vw,3rem)/* fluid from 2.5rem at 48rem to 3rem at 96rem */;
-  }
-
-  .md\:\~md\:\~text-5xl {
-    /*
-error - Fluid variants can only be used with fluid utilities
-*/
+  .md\:\~md\:\~text-3xl\/4xl {
+    font-size: clamp(1.875rem,1.5rem + 0.781vw,2.25rem)/* fluid type from 1.875rem at 48rem to 2.25rem at 96rem */;
+    line-height: clamp(2.25rem,2rem + 0.52vw,2.5rem)/* fluid from 2.25rem at 48rem to 2.5rem at 96rem */;
   }
 
   .md\:\~md\:\~text-5xl\/6xl {
@@ -2022,6 +2157,11 @@ error - Fluid variants can only be used with fluid utilities
 
   .md\:\~md\:\~w-36\/48 {
     width: clamp(9rem,6rem + 6.25vw,12rem)/* fluid from 9rem at 48rem to 12rem at 96rem */;
+  }
+
+  .md\:\~md\:\~px-14\/20 {
+    padding-left: clamp(3.5rem,2rem + 3.13vw,5rem)/* fluid from 3.5rem at 48rem to 5rem at 96rem */;
+    padding-right: clamp(3.5rem,2rem + 3.13vw,5rem)/* fluid from 3.5rem at 48rem to 5rem at 96rem */;
   }
 }
 
@@ -2057,6 +2197,10 @@ error - Fluid variants can only be used with fluid utilities
 
   .lg\:aspect-square {
     aspect-ratio: 1 / 1;
+  }
+
+  .lg\:h-screen {
+    height: 100vh;
   }
 
   .lg\:min-h-0 {
@@ -2191,6 +2335,12 @@ error - Fluid variants can only be used with fluid utilities
   }
 
   .\32xl\:\~2xl\:\~text-base\/xl {
+    /*
+error - Start and end breakpoints are both `96rem`
+*/
+  }
+
+  .\32xl\:\~2xl\:\~text-sm\/lg {
     /*
 error - Start and end breakpoints are both `96rem`
 */

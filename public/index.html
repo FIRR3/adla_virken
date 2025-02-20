@@ -13,9 +13,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
     <title>Ädla Virken</title>
   </head>
-  <body class="min-h-[200vh] font-noto-sans">
+  <body class="min-h-[400vh] font-noto-sans">
     <header class="fixed left-0 top-0 z-50 w-full shadow-lg">
-      <nav class="relative flex w-full flex-row items-center justify-between bg-white ~h-24/28 ~px-6/16">
+      <nav class="relative flex w-full flex-row items-center justify-between bg-white ~h-24/28 ~px-6/16 2xl:px-[8vw]">
         <a href="index.html" class="cursor-pointer"><img src="../images/adla-virken-logo.svg" alt="" class="~w-10/12"/></a>
         <ul id="menu" class="absolute left-0 w-full font-normal shadow-md ~top-24/28 ~lg:~gap-2/6 max-lg:h-0 max-lg:overflow-hidden max-lg:bg-white lg:relative lg:top-0 lg:flex lg:w-fit lg:flex-row lg:items-center lg:px-0 lg:shadow-none">
           <li class="dropdown-activator group relative cursor-pointer rounded select-none">
@@ -70,8 +70,8 @@
         </div>
       </nav>
     </header>
-    <main>
-      <section class="flex h-svh lg:h-screen w-full flex-col items-center justify-center bg-[url('../images/tree-trunk-side.png')] bg-cover bg-center bg-no-repeat ~px-4/6 md:~md:~px-14/20 md:items-start">
+    <main class="flex flex-col ~gap-14/20">
+      <section class="flex h-svh lg:h-screen w-full flex-col items-center justify-center bg-[url('../images/tree-trunk-side.png')] bg-cover bg-center bg-no-repeat ~px-4/6 md:~md:~px-14/20 md:items-start 2xl:px-[10vw]">
         <div>
           <h1 class="title-txt text-white">
             <span class="font-thin">Ädla Virken</span>:<br class="md:hidden" />
@@ -85,16 +85,54 @@
         </div>
       </section>
 
-      <section class="~px-4/24 md:~md:~px-14/20 flex flex-col md:flex-row-reverse justify-center items-center ~mt-8/16">
-        <div>
+      <section class="~px-4/24 md:~md:~px-14/20 2xl:px-[10vw] flex flex-col md:flex-row-reverse justify-center items-center ~gap-8/14">
+        <div class="md:w-1/2">
           <h2 class="sub-txt">Letar du efter kvalitetsvirke?</h2>
-          <p class="p-txt">Om du är en uppköpare som är intresserad av att köpa äkta högkvalitetsvirke, skicka in en begäran hos oss, och vi kommer att hitta en producent som kan leverera till dig.</p>
-          <button class="btn-regular">Gör en begäran</button>
+          <p class="p-txt ~mt-3/5">Om du är en uppköpare som är intresserad av att köpa äkta högkvalitetsvirke, skicka in en begäran hos oss, och vi kommer att hitta en producent som kan leverera till dig.</p>
+          <button class="btn-regular ~mt-4/10">Gör en begäran</button>
         </div>
-        <div>
-          <img height="500" width="750" src="../images/many-small-tree-trunks.jpeg" alt="Many small tree trunks" class="h-auto max-w-full aspect-[16/9] object-cover md:aspect-square">
+        <div class="md:w-1/2 inline-flex justify-center">
+          <img height="500" width="750" src="../images/many-small-tree-trunks.jpeg" alt="Many small tree trunks" class="h-auto max-w-full aspect-[3/2] object-cover md:aspect-[4/3] ~rounded-md/lg">
         </div>
+      </section>
+      <hr class="text-primary-full border-t-4 mx-auto w-3/5 rounded-lg md:hidden">
+      <section class="~px-4/24 md:~md:~px-14/20 2xl:px-[10vw] flex flex-col md:flex-row justify-center items-center ~gap-8/14">
+        <div class="md:w-1/2">
+          <h2 class="sub-txt">Vill du sälja ditt högkvalitetsvirke?</h2>
+          <p class="p-txt ~mt-3/5">Om du är en skogsägare som är intresserad av att sälja ditt högkvalitetsvirke för ett kvalitetspris, skicka in en begäran hos oss, och vi kommer att hitta en uppköpare som är intresserad i ditt erbjudande.</p>
+          <button class="btn-regular ~mt-4/10">Skapa en annons</button>
+        </div>
+        <div class="md:w-1/2 inline-flex justify-center">
+          <img height="500" width="750" src="../images/forest-scene.png" alt="Many small tree trunks" class="h-auto max-w-full aspect-[3/2] object-cover md:aspect-[4/3] ~rounded-md/lg">
+        </div>
+      </section>
 
+      <section class="bg-secondary ~px-4/24 md:~md:~px-14/20 2xl:px-[10vw] ~py-14/20">
+        <h2 class="sub-txt col-span-1 md:col-span-2 text-center row-span-">Vad är Ädla Virken?</h2>
+        <div class="grid grid-rows-6 grid-cols-1 md:grid-cols-2 ~gap-7/10 ~mt-7/10">
+          <div class="flex flex-col bg-white ~p-6/10 rounded-3xl rounded-br-none row-span-3">
+            <h3 class="sub-txt-2">Vad gör vi?</h3>
+            <p class="p-txt ~mt-2/4">Hos Ädla Virken vill vi skapa ett effektivt sätt att sälja och att få tag på högkvalitetsvirke. Hållbart och kraftigt virke blir alltmer eftertraktad och vi vill skapa en marknad för det.</p>
+            <button class="btn-regular max-xs:w-full xs:~xs/md:~w-36/40 ~md:~w-32/36 ~mt-3/8">Läs mer</button>
+          </div>
+          
+          <div class="flex flex-col bg-white ~p-6/10 rounded-3xl rounded-br-none row-span-3">
+            <h3 class="sub-txt-2">Vem är vi?</h3>
+            <p class="p-txt ~mt-2/4">Ädla Virken grundades av tre unga entrenprenörer som vill skapa skillnad i dagens skogsmarknad, med en fokus på hållbarhet och kvalitet.</p>
+            <button class="btn-regular max-xs:w-full xs:~xs/md:~w-36/40 ~md:~w-32/36 ~mt-3/8">Läs mer</button>
+          </div>
+  
+          <div class="flex flex-col bg-white ~p-6/10 rounded-3xl rounded-br-none row-span-3">
+            <h3 class="sub-txt-2">Vad är vårt mål?</h3>
+            <p class="p-txt ~mt-2/4">I en värld där lågkvalitetsprodukter frodas, vill vi istället fokusera oss på att hjälpa driva kvalitetsproduktion inom virkesindustrin.</p>
+            <button class="btn-regular max-xs:w-full xs:~xs/md:~w-36/40 ~md:~w-32/36 ~mt-3/8">Läs mer</button>
+          </div>
+  
+          <div class="flex flex-col bg-primary-full ~p-6/10 rounded-3xl rounded-br-none row-span-2">
+            <h3 class="sub-txt-2 text-white">Har du fler frågor?</h3>
+            <button class="btn-regular max-xs:w-full xs:~xs/md:~w-36/40 ~md:~w-32/36 ~mt-2/4 border-white hover:border-grey-light">Kontakta oss</button>
+          </div>  
+        </div>
       </section>
     </main>
 

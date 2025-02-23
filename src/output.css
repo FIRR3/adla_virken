@@ -1842,6 +1842,13 @@ video {
   margin-top: clamp(0.75rem,0.42rem + 1.64vw,2rem)/* fluid from 0.75rem at 20rem to 2rem at 96rem */;
 }
 
+.\~mt-24\/28 {
+  margin-top: clamp(6rem,5.74rem + 1.32vw,7rem)/* fluid from 6rem at 20rem to 7rem at 96rem */;
+}
+
+.\~mt-24 /* error - Missing end value */ {
+}
+
 .\~size-24 /* error - Missing end value */ {
 }
 

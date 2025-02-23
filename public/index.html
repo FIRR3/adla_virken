@@ -13,10 +13,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
     <title>Ädla Virken</title>
   </head>
-  <body class="min-h-[400vh] font-noto-sans">
+  <body class="font-noto-sans">
     <header class="fixed left-0 top-0 z-50 w-full shadow-lg">
       <nav class="relative flex w-full flex-row items-center justify-between bg-white ~h-24/28 ~px-6/16 2xl:px-[8vw]">
-        <a href="index.html" class="cursor-pointer"><img src="../images/adla-virken-logo.svg" alt="" class="~w-10/12"/></a>
+        <a href="index.html" class="cursor-pointer"><img src="../images/adla-virken-logo.png" alt="" class="~w-10/12"/></a>
         <ul id="menu" class="absolute left-0 w-full font-normal shadow-md ~top-24/28 ~lg:~gap-2/6 max-lg:h-0 max-lg:overflow-hidden max-lg:bg-white lg:relative lg:top-0 lg:flex lg:w-fit lg:flex-row lg:items-center lg:px-0 lg:shadow-none">
           <li class="dropdown-activator group relative cursor-pointer rounded select-none">
             <div class="dropdown-header inline-flex w-full flex-row items-center justify-between rounded ~gap-1/2 ~px-6/16 ~py-2/5 active:bg-grey-light lg:justify-normal lg:px-4 lg:py-3 lg:group-hover:bg-grey-light">
@@ -77,7 +77,7 @@
             <span class="font-thin">Ädla Virken</span>:<br class="md:hidden" />
             kvalitetsvirke<br />för kvalitetspriser
           </h1>
-          <p class="p-txt text-center text-white ~mt-3/4">Vi är den framtida marknadsplatsen för<br />svenskt kvalitetsvirke.</p>
+          <p class="p-txt text-white ~mt-3/4">Vi är den framtida marknadsplatsen för<br />svenskt kvalitetsvirke.</p>
         </div>
         <div class="flex w-full flex-col justify-center ~mt-8/12 ~gap-2/4 xs:flex-row md:w-fit md:justify-start">
           <a href="" class="btn-regular border-white hover:border-grey-light">Sälj virke</a>
@@ -110,33 +110,65 @@
       <section class="bg-secondary ~px-4/24 md:~md:~px-14/20 2xl:px-[10vw] ~py-14/20">
         <h2 class="sub-txt col-span-1 md:col-span-2 text-center row-span-">Vad är Ädla Virken?</h2>
         <div class="grid grid-rows-6 grid-cols-1 md:grid-cols-2 ~gap-7/10 ~mt-7/10">
-          <div class="flex flex-col bg-white ~p-6/10 rounded-3xl rounded-br-none row-span-3">
+          <div class="flex flex-col bg-white ~p-4/6 rounded-3xl rounded-br-none row-span-3">
             <h3 class="sub-txt-2">Vad gör vi?</h3>
             <p class="p-txt ~mt-2/4">Hos Ädla Virken vill vi skapa ett effektivt sätt att sälja och att få tag på högkvalitetsvirke. Hållbart och kraftigt virke blir alltmer eftertraktad och vi vill skapa en marknad för det.</p>
-            <button class="btn-regular max-xs:w-full xs:~xs/md:~w-36/40 ~md:~w-32/36 ~mt-3/8">Läs mer</button>
+            <a href="" class="btn-regular max-xs:w-full xs:~xs/md:~w-36/40 ~md:~w-32/36 ~mt-3/8">Läs mer</a>
           </div>
           
-          <div class="flex flex-col bg-white ~p-6/10 rounded-3xl rounded-br-none row-span-3">
+          <div class="flex flex-col bg-white ~p-4/6 rounded-3xl rounded-br-none row-span-3">
             <h3 class="sub-txt-2">Vem är vi?</h3>
             <p class="p-txt ~mt-2/4">Ädla Virken grundades av tre unga entrenprenörer som vill skapa skillnad i dagens skogsmarknad, med en fokus på hållbarhet och kvalitet.</p>
-            <button class="btn-regular max-xs:w-full xs:~xs/md:~w-36/40 ~md:~w-32/36 ~mt-3/8">Läs mer</button>
+            <a href="" class="btn-regular max-xs:w-full xs:~xs/md:~w-36/40 ~md:~w-32/36 ~mt-3/8">Läs mer</a>
           </div>
   
-          <div class="flex flex-col bg-white ~p-6/10 rounded-3xl rounded-br-none row-span-3">
+          <div class="flex flex-col bg-white ~p-4/6 rounded-3xl rounded-br-none row-span-3">
             <h3 class="sub-txt-2">Vad är vårt mål?</h3>
             <p class="p-txt ~mt-2/4">I en värld där lågkvalitetsprodukter frodas, vill vi istället fokusera oss på att hjälpa driva kvalitetsproduktion inom virkesindustrin.</p>
-            <button class="btn-regular max-xs:w-full xs:~xs/md:~w-36/40 ~md:~w-32/36 ~mt-3/8">Läs mer</button>
+            <a href="" class="btn-regular max-xs:w-full xs:~xs/md:~w-36/40 ~md:~w-32/36 ~mt-3/8">Läs mer</a>
           </div>
   
-          <div class="flex flex-col bg-primary-full ~p-6/10 rounded-3xl rounded-br-none row-span-2">
+          <div class="flex flex-col bg-primary-full ~p-4/6 rounded-3xl rounded-br-none row-span-2">
             <h3 class="sub-txt-2 text-white">Har du fler frågor?</h3>
-            <button class="btn-regular max-xs:w-full xs:~xs/md:~w-36/40 ~md:~w-32/36 ~mt-2/4 border-white hover:border-grey-light">Kontakta oss</button>
+            <a href="" class="btn-regular max-xs:w-full xs:~xs/md:~w-36/40 ~md:~w-32/36 ~mt-2/4 border-white hover:border-grey-light">Kontakta oss</a>
           </div>  
         </div>
       </section>
     </main>
 
-
+    <footer class="bg-primary-full ~px-4/24 md:~md:~px-14/20 2xl:px-[10vw] ~py-3/8 text-white p-txt flex flex-col gap-4">
+      <a href="index.html" class="cursor-pointer"><img src="../images/adla-virken-logo-white.png" alt="" class="~w-14/16"/></a>
+      <div class="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-4 grid-rows-3 ~gap-2/4">
+        <ul class="row-span-3">
+          <li><p class="font-semibold">Adress:</p></li>
+          <li><p>Frejgatan 30, Norrtullsgatan,<br>Stockholm</p></li>
+          <li class="~mt-2/4"><p class="font-semibold">Kontaktinformation:</p></li>
+          <li><a href="" class="hover:underline">info@adlavirken.com</a></li>
+          <li><a href="" class="hover:underline">+46 1 234 56 78</a></li>
+        </ul>
+        <ul class="row-span-2 xs:max-lg:pl-6">
+          <li><p class="font-semibold mx-auto">Ädla Virken:</p></li>
+          <li><a href="" class="hover:underline">Om oss</a></li>
+          <li><a href="" class="hover:underline">Vanliga frågor</a></li>
+          <li><a href="" class="hover:underline">Integritetspolicy</a></li>
+        </ul>
+        <ul class="row-span-2 xs:max-lg:pl-6">
+          <li><p class="font-semibold">Tjänster:</p></li>
+          <li><a href="" class="hover:underline">Sälj virke</a></li>
+          <li><a href="" class="hover:underline">Beställ virke</a></li>
+        </ul>
+        <ul class="row-span-2 md:max-lg:pl-6">
+          <li><p class="font-semibold">Mer:</p></li>
+          <li><a href="" class="hover:underline">Kontakta oss</a></li>
+          <ul class="flex flex-row ~gap-1/2">
+            <li><a href="" class="sub-txt-2"><i class="fa-brands fa-linkedin"></i></a></li>
+            <li><a href="" class="sub-txt-2"><i class="fa-brands fa-instagram"></i></a></li>
+          </ul>
+        </ul>
+      </div>
+      <hr>
+      <p class="text-center">Copyright &copy; 2025 Ädla Virken</p>
+    </footer>
     <script src="../javascript/main.js"></script>
   </body>
 </html>

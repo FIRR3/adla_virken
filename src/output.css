@@ -1080,6 +1080,10 @@ video {
   grid-template-rows: repeat(6, minmax(0, 1fr));
 }
 
+.grid-rows-3 {
+  grid-template-rows: repeat(3, minmax(0, 1fr));
+}
+
 .flex-row {
   flex-direction: row;
 }
@@ -1180,6 +1184,20 @@ video {
   gap: 8vw;
 }
 
+.gap-3 {
+  gap: 0.75rem;
+}
+
+.gap-x-10 {
+  -moz-column-gap: 2.5rem;
+       column-gap: 2.5rem;
+}
+
+.gap-x-16 {
+  -moz-column-gap: 4rem;
+       column-gap: 4rem;
+}
+
 .overflow-auto {
   overflow: auto;
 }
@@ -1234,6 +1252,10 @@ video {
 
 .rounded-md {
   border-radius: 0.375rem;
+}
+
+.rounded-full {
+  border-radius: 9999px;
 }
 
 .rounded-e-md {
@@ -1481,6 +1503,18 @@ video {
   padding-top: 30vw;
 }
 
+.pl-4 {
+  padding-left: 1rem;
+}
+
+.pl-2 {
+  padding-left: 0.5rem;
+}
+
+.pl-6 {
+  padding-left: 1.5rem;
+}
+
 .\!text-center {
   text-align: center !important;
 }
@@ -1578,6 +1612,10 @@ video {
 
 .font-thin {
   font-weight: 100;
+}
+
+.font-bold {
+  font-weight: 700;
 }
 
 .leading-10 {
@@ -1869,6 +1907,17 @@ video {
 .\~w-8 /* error - Missing end value */ {
 }
 
+.\~w-14\/20 {
+  width: clamp(3.5rem,3.11rem + 1.97vw,5rem)/* fluid from 3.5rem at 20rem to 5rem at 96rem */;
+}
+
+.\~w-14 /* error - Missing end value */ {
+}
+
+.\~w-14\/16 {
+  width: clamp(3.5rem,3.37rem + 0.66vw,4rem)/* fluid from 3.5rem at 20rem to 4rem at 96rem */;
+}
+
 .\~gap-1 /* error - Missing end value */ {
 }
 
@@ -1916,6 +1965,14 @@ video {
   gap: clamp(2rem,1.61rem + 1.97vw,3.5rem)/* fluid from 2rem at 20rem to 3.5rem at 96rem */;
 }
 
+.\~gap-4\/6 {
+  gap: clamp(1rem,0.87rem + 0.66vw,1.5rem)/* fluid from 1rem at 20rem to 1.5rem at 96rem */;
+}
+
+.\~gap-2\/3 {
+  gap: clamp(0.5rem,0.43rem + 0.33vw,0.75rem)/* fluid from 0.5rem at 20rem to 0.75rem at 96rem */;
+}
+
 .\~rounded /* error - Start and end values are both `0.25rem` */ {
 }
 
@@ -1942,6 +1999,14 @@ video {
 
 .\~p-6\/10 {
   padding: clamp(1.5rem,1.24rem + 1.32vw,2.5rem)/* fluid from 1.5rem at 20rem to 2.5rem at 96rem */;
+}
+
+.\~p-6\/8 {
+  padding: clamp(1.5rem,1.37rem + 0.66vw,2rem)/* fluid from 1.5rem at 20rem to 2rem at 96rem */;
+}
+
+.\~p-4\/6 {
+  padding: clamp(1rem,0.87rem + 0.66vw,1.5rem)/* fluid from 1rem at 20rem to 1.5rem at 96rem */;
 }
 
 .\~px-12 /* error - Missing end value */ {
@@ -2017,6 +2082,11 @@ video {
 }
 
 .\~py-6 /* error - Missing end value */ {
+}
+
+.\~py-3\/8 {
+  padding-top: clamp(0.75rem,0.42rem + 1.64vw,2rem)/* fluid from 0.75rem at 20rem to 2rem at 96rem */;
+  padding-bottom: clamp(0.75rem,0.42rem + 1.64vw,2rem)/* fluid from 0.75rem at 20rem to 2rem at 96rem */;
 }
 
 .\~pb-3 /* error - Missing end value */ {
@@ -2126,6 +2196,10 @@ error - Start and end breakpoints are both `96rem`
   background-color: rgb(127 177 100 / var(--tw-bg-opacity, 1));
 }
 
+.hover\:underline:hover {
+  text-decoration-line: underline;
+}
+
 .active\:bg-grey-light:active {
   --tw-bg-opacity: 1;
   background-color: rgb(235 235 235 / var(--tw-bg-opacity, 1));
@@ -2222,12 +2296,28 @@ error - Start and end breakpoints are both `96rem`
     width: fit-content;
   }
 
+  .xs\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .xs\:flex-row {
     flex-direction: row;
   }
 
   .xs\:\~xs\/md\:\~w-36\/40 {
     width: clamp(9rem,8.29rem + 3.57vw,10rem)/* fluid from 9rem at 20rem to 10rem at 48rem */;
+  }
+
+  @media not all and (min-width: 64rem) {
+    .xs\:max-lg\:pl-6 {
+      padding-left: 1.5rem;
+    }
+  }
+
+  @media not all and (min-width: 48rem) {
+    .xs\:max-md\:pl-6 {
+      padding-left: 1.5rem;
+    }
   }
 }
 
@@ -2262,6 +2352,10 @@ error - Start and end breakpoints are both `96rem`
 
   .sm\:w-56 {
     width: 14rem;
+  }
+
+  .sm\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .sm\:gap-10 {
@@ -2301,6 +2395,12 @@ error - Start and end breakpoints are both `96rem`
   @media not all and (min-width: 64rem) {
     .sm\:max-lg\:flex {
       display: flex;
+    }
+  }
+
+  @media not all and (min-width: 48rem) {
+    .sm\:max-md\:pl-6 {
+      padding-left: 1.5rem;
     }
   }
 }
@@ -2353,6 +2453,10 @@ error - Start and end breakpoints are both `96rem`
 
   .md\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .md\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
   .md\:flex-row {
@@ -2453,6 +2557,12 @@ error - Start and end breakpoints are both `96rem`
     padding-left: clamp(3.5rem,2rem + 3.13vw,5rem)/* fluid from 3.5rem at 48rem to 5rem at 96rem */;
     padding-right: clamp(3.5rem,2rem + 3.13vw,5rem)/* fluid from 3.5rem at 48rem to 5rem at 96rem */;
   }
+
+  @media not all and (min-width: 64rem) {
+    .md\:max-lg\:pl-6 {
+      padding-left: 1.5rem;
+    }
+  }
 }
 
 @media (min-width: 64rem) {
@@ -2504,6 +2614,10 @@ error - Start and end breakpoints are both `96rem`
   .lg\:w-fit {
     width: -moz-fit-content;
     width: fit-content;
+  }
+
+  .lg\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
   .lg\:flex-row {

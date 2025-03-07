@@ -1849,6 +1849,31 @@ video {
 .\~mt-24 /* error - Missing end value */ {
 }
 
+.\~mt-28\/32 {
+  margin-top: clamp(7rem,6.74rem + 1.32vw,8rem)/* fluid from 7rem at 20rem to 8rem at 96rem */;
+}
+
+.\~mt-28 /* error - Missing end value */ {
+}
+
+.\~mt-32\/36 {
+  margin-top: clamp(8rem,7.74rem + 1.32vw,9rem)/* fluid from 8rem at 20rem to 9rem at 96rem */;
+}
+
+.\~mt-32 /* error - Missing end value */ {
+}
+
+.\~mt-36\/40 {
+  margin-top: clamp(9rem,8.74rem + 1.32vw,10rem)/* fluid from 9rem at 20rem to 10rem at 96rem */;
+}
+
+.\~mt-36 /* error - Missing end value */ {
+}
+
+.\~mt-4\/6 {
+  margin-top: clamp(1rem,0.87rem + 0.66vw,1.5rem)/* fluid from 1rem at 20rem to 1.5rem at 96rem */;
+}
+
 .\~size-24 /* error - Missing end value */ {
 }
 
@@ -2058,6 +2083,14 @@ video {
   padding-right: clamp(1.5rem,0.84rem + 3.29vw,4rem)/* fluid from 1.5rem at 20rem to 4rem at 96rem */;
 }
 
+.\~px-2\/12 {
+  padding-left: clamp(0.5rem,-0.16rem + 3.29vw,3rem)/* fluid from 0.5rem at 20rem to 3rem at 96rem */;
+  padding-right: clamp(0.5rem,-0.16rem + 3.29vw,3rem)/* fluid from 0.5rem at 20rem to 3rem at 96rem */;
+}
+
+.\~px-7 /* error - Missing end value */ {
+}
+
 .\~py-1 /* error - Missing end value */ {
 }
 
@@ -2094,6 +2127,11 @@ video {
 .\~py-3\/8 {
   padding-top: clamp(0.75rem,0.42rem + 1.64vw,2rem)/* fluid from 0.75rem at 20rem to 2rem at 96rem */;
   padding-bottom: clamp(0.75rem,0.42rem + 1.64vw,2rem)/* fluid from 0.75rem at 20rem to 2rem at 96rem */;
+}
+
+.\~py-3\/5 {
+  padding-top: clamp(0.75rem,0.62rem + 0.66vw,1.25rem)/* fluid from 0.75rem at 20rem to 1.25rem at 96rem */;
+  padding-bottom: clamp(0.75rem,0.62rem + 0.66vw,1.25rem)/* fluid from 0.75rem at 20rem to 1.25rem at 96rem */;
 }
 
 .\~pb-3 /* error - Missing end value */ {
@@ -2565,6 +2603,11 @@ error - Start and end breakpoints are both `96rem`
     padding-right: clamp(3.5rem,2rem + 3.13vw,5rem)/* fluid from 3.5rem at 48rem to 5rem at 96rem */;
   }
 
+  .md\:\~md\:\~px-7\/10 {
+    padding-left: clamp(1.75rem,1rem + 1.56vw,2.5rem)/* fluid from 1.75rem at 48rem to 2.5rem at 96rem */;
+    padding-right: clamp(1.75rem,1rem + 1.56vw,2.5rem)/* fluid from 1.75rem at 48rem to 2.5rem at 96rem */;
+  }
+
   @media not all and (min-width: 64rem) {
     .md\:max-lg\:pl-6 {
       padding-left: 1.5rem;
@@ -2748,6 +2791,11 @@ error - Start and end breakpoints are both `96rem`
   .\32xl\:px-\[8vw\] {
     padding-left: 8vw;
     padding-right: 8vw;
+  }
+
+  .\32xl\:px-\[5vw\] {
+    padding-left: 5vw;
+    padding-right: 5vw;
   }
 
   .\32xl\:\~text-base\/xl {
